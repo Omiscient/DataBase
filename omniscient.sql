@@ -72,6 +72,28 @@ CREATE TABLE IF NOT EXISTS `student_subjects` (
   UNIQUE KEY `USN` (`USN`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-----------------------------------------------------
+
+--
+-- table structure for table 'subjects'
+--
+
+CREATE TABLE IF NOT EXISTS 'subjects'(
+  'Subject Code' varchar(7) NOT NULL UNIQUE,
+  'Subject' varchar(20) NOT NULL,
+  'USN' varchar(10) NOT NULL UNIQUE,
+  'Semester' int(1) NOT NULL,
+  'Internal 1' float(5) NOT NULL,
+  'Internal 2' float(5) NOT NULL,
+  'Internal 3' float(5) NOT NULL,
+  'Total Internal' float(6) NOT NULL,
+  'External' float(6) NOT NULL,
+  'Marks Percentage' float(5) NOT NULL,
+  'Class Attended' int(3) NOT NULL,
+  'Total Class' int(3) NOT NULL,
+  'Attendance Percentage' float(5) NOT NULL,
+  ) Default CHARSET=latin1;
+  
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
